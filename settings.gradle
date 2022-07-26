@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "OpenGLES3_tutorial"
 include ':common'
 include ':triangle'
+include ':rectangle'

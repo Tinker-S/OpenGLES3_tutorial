@@ -2,6 +2,7 @@ package com.example.opengles.tutorial
 
 import android.content.Context
 import android.opengl.GLES30
+import com.example.opengles.common.MatrixState
 import com.example.opengles.common.ShaderUtil
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -100,6 +101,11 @@ class Star(
     fun drawSelf() {
         GLES30.glUseProgram(program)
 
+        MatrixState.setInitialState()
+        MatrixState.rotate(90f, 0f, 0f, 1f)
+        MatrixState.translate(0f, 0f, 0.8f)
+
+        GLES30.glUniformMatrix4fv(0, 1, false, MatrixState.getFinalMatrix(), 0)
         GLES30.glVertexAttribPointer(0, 2, GLES30.GL_FLOAT, false, 0, vertexBuffer)
         GLES30.glVertexAttribPointer(1, 4, GLES30.GL_FLOAT, false, 0, colorBuffer)
         GLES30.glEnableVertexAttribArray(0)

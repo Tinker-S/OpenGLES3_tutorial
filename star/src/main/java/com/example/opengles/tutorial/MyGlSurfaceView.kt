@@ -3,6 +3,7 @@ package com.example.opengles.tutorial
 import android.content.Context
 import android.opengl.GLES30
 import android.opengl.GLSurfaceView
+import com.example.opengles.common.MatrixState
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
 import kotlin.math.min
@@ -26,9 +27,10 @@ class MyGlSurfaceView(context: Context) : GLSurfaceView(context) {
         }
 
         override fun onSurfaceChanged(gl: GL10?, width: Int, height: Int) {
-            // 暂时没有引入变换矩阵，为了让图不变形，我们先手动将viewport设置成正方形
-            val minSize = min(width, height)
-            GLES30.glViewport(0, 0, minSize, minSize)
+            GLES30.glViewport(0, 0, width, height)
+            val ratio = width.toFloat() / height
+            MatrixState.setProjectFrustum(-ratio, ratio, -1f, 1f, 1f, 10f)
+            MatrixState.setCamera(0f, 0f, 2f, 0f, 0f, 0f, 0f, 1f, 0f)
         }
 
         override fun onDrawFrame(gl: GL10?) {

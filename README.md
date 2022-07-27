@@ -19,3 +19,5 @@ Samples for OpenGLES 3 by kotlin.
     - modelMatrix是模型矩阵，默认设置成单位矩阵，可以对其做平移，旋转，缩放等变换
     
 - circle 绘制圆（多边形）
+
+- cube 绘制立方体

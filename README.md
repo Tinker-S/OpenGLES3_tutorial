@@ -23,3 +23,7 @@ Samples for OpenGLES 3 by kotlin.
 - cube 绘制立方体
 
 - ball 绘制球
+
+- cone 绘制圆锥体
+
+- cylinder 绘制圆柱体

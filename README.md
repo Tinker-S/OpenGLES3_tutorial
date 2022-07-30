@@ -15,7 +15,7 @@ Samples for OpenGLES 3 by kotlin.
     - viewMatrix：摄像机位置，由Matrix.setLookAtM设置
     - modelMatrix：模型矩阵，默认设置成单位矩阵，可以对其做平移，旋转，缩放等变换
 
-最终矩阵 = projMatrix * viewMatrix * modelMatrix
+    最终矩阵 = projMatrix * viewMatrix * modelMatrix
     
 - circle 绘制圆（多边形）
 
@@ -30,6 +30,7 @@ Samples for OpenGLES 3 by kotlin.
 - light 光照模型（OpenGL采用冯氏光照模型）
 
     - 环境光照射结果 = 材质的反射系数 * 环境光强度
-    - 散射光照射结果 = 材质的反射系数 * 散射光强度 * max(cos(入射角),0)
+    - 散射光照射结果 = 材质的反射系数 * 散射光强度 * max(cos(入射角), 0)
     - 镜面光照射结果 = 材质的反射系数 * 镜面光强度 * max(0, (cos(半向量与法向量的夹角))粗糙度)
     
+- texture 绘制纹理

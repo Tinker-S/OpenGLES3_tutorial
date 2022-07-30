@@ -34,3 +34,5 @@ Samples for OpenGLES 3 by kotlin.
     - 镜面光照射结果 = 材质的反射系数 * 镜面光强度 * max(0, (cos(半向量与法向量的夹角))粗糙度)
     
 - texture 绘制纹理
+
+- teapot 从模型文件加载一个茶壶

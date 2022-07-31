@@ -36,3 +36,5 @@ Samples for OpenGLES 3 by kotlin.
 - texture 绘制纹理
 
 - teapot 从模型文件加载一个茶壶
+
+- camera 实现相机预览效果（实时滤镜）
